@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.zip
+*.csv
+!pilot/results/*.csv
+.venv/
