@@ -1,0 +1,131 @@
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   6%|▋         | 13/201 [00:00<00:01, 110.90it/s]Loading weights:  14%|█▍        | 28/201 [00:00<00:01, 128.59it/s]Loading weights:  22%|██▏       | 45/201 [00:00<00:01, 138.76it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 489.94it/s]
+{
+  "experiment_type": "candidate_empirical_pilot",
+  "input_provenance": "USER_MUST_VERIFY_SOURCE",
+  "pilot": true,
+  "seed": 1729,
+  "cutoff_rule": "Verified precise timezone-aware publication < NY close; date-only/midnight/ambiguous eligible first subsequent trading day after original source calendar date",
+  "ticker_selection": [
+    "GILD",
+    "DAL",
+    "EBAY",
+    "CMG",
+    "BAC",
+    "FDX",
+    "HD",
+    "BMY"
+  ],
+  "splits": {
+    "validation_start": "2018-01-04",
+    "calibration_start": "2018-10-22",
+    "test_start": "2019-08-12"
+  },
+  "audit": {
+    "news_rows": 13255,
+    "news_ambiguous_time_or_zone_rate": 0.9989,
+    "publisher_nonmissing_rate": 1.0,
+    "normalized_duplicate_rate": 0.0011,
+    "tickers": [
+      "BAC",
+      "BMY",
+      "CMG",
+      "DAL",
+      "EBAY",
+      "FDX",
+      "GILD",
+      "HD"
+    ],
+    "first_news_date": "2015-01-02",
+    "last_news_date": "2020-05-31",
+    "price_days": 10711,
+    "news_unique_story_keys": 13240
+  },
+  "matched_news_rows": 13232,
+  "training_rows": 5880,
+  "validation_rows": 1600,
+  "calibration_rows": 1600,
+  "test_rows": 1607,
+  "attack_examples": 165,
+  "jackknife_validation_samples": 259,
+  "threshold": 0.16762871648528974,
+  "price_only": {
+    "n": 1607,
+    "coverage": 0.794,
+    "mean_width": 0.053789,
+    "mae": 0.01931,
+    "q": 0.026895
+  },
+  "clean_news": {
+    "n": 1607,
+    "coverage": 0.7922,
+    "mean_width": 0.052924,
+    "mae": 0.019324,
+    "q": 0.026462
+  },
+  "attacked_news": {
+    "n": 1607,
+    "coverage": 0.7909,
+    "mean_width": 0.052924,
+    "mae": 0.01933,
+    "q": 0.026462
+  },
+  "clean_routed": {
+    "n": 1607,
+    "coverage": 0.794,
+    "mean_width": 0.05377,
+    "mae": 0.019322,
+    "q": 0.026885
+  },
+  "attacked_routed": {
+    "n": 1607,
+    "coverage": 0.7934,
+    "mean_width": 0.05377,
+    "mae": 0.019316,
+    "q": 0.026885
+  },
+  "clean_fallback_rate": 0.7187,
+  "attacked_fallback_rate": 0.7231,
+  "attacked_subset_price_only": {
+    "n": 165,
+    "coverage": 0.7212,
+    "mean_width": 0.053789,
+    "mae": 0.023993,
+    "q": 0.026895
+  },
+  "attacked_subset_news": {
+    "n": 165,
+    "coverage": 0.7152,
+    "mean_width": 0.052924,
+    "mae": 0.024101,
+    "q": 0.026462
+  },
+  "clean_subset_news": {
+    "n": 165,
+    "coverage": 0.7273,
+    "mean_width": 0.052924,
+    "mae": 0.024039,
+    "q": 0.026462
+  },
+  "attacked_subset_routed": {
+    "n": 165,
+    "coverage": 0.7212,
+    "mean_width": 0.05377,
+    "mae": 0.023778,
+    "q": 0.026885
+  },
+  "clean_subset_routed": {
+    "n": 165,
+    "coverage": 0.7273,
+    "mean_width": 0.05377,
+    "mae": 0.023842,
+    "q": 0.026885
+  },
+    "Lead-label boundary purging applied between train/val/cal/test.",
+    "Time-series and cross-ticker dependence invalidate iid conformal finite-sample guarantees.",
+    "The news source may already encode post-cutoff market information; manually audit original timestamps.",
+    "Attacks are on historical input features only, NOT a simulation of prices responding to real misinformation.",
+    "No baseline beats are assumed; report all results including null or negative findings."
+  ]
+}
